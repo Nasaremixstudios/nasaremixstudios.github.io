@@ -2,24 +2,52 @@
 ---
 @import "minima";
 
-/* Nasaremix Studios - Aetherium Purple Theme */
+/* 🌌 Nasaremix Studios - Aetherium Purple Theme 🌌 */
 
-/* Make links purple */
+/* 1. Make the background a tiny bit darker so white boxes would pop (optional, but looks clean) */
+body {
+  background-color: #fafafa;
+}
+
+/* 2. Style all Headers (H1, H2, H3) to be a very dark, sleek purple */
+h1, h2, h3 {
+  color: #2b0044;
+  font-weight: 700;
+}
+
+/* 3. The Top Navigation Bar Purple Stripe */
+.site-header {
+  border-top: 6px solid #8A2BE2;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.05); /* Adds a tiny shadow under the menu */
+}
+
+/* 4. Normal text links */
 a {
   color: #8A2BE2;
 }
-
 a:hover {
   color: #5C1B99;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-/* Add a purple stripe to the top of the website */
-.site-header {
-  border-top: 5px solid #8A2BE2;
-}
-
-/* Make headers look cleaner */
-h1, h2, h3 {
+/* 5. 🟪 CUSTOM DOWNLOAD BUTTONS 🟪 */
+a.btn {
+  display: inline-block;
+  background-color: #8A2BE2; /* Aetherium Purple */
+  color: #ffffff !important;
+  padding: 10px 20px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border-radius: 8px; /* Rounded corners */
+  text-decoration: none !important;
   font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(138, 43, 226, 0.3); /* Glowing purple shadow */
+  transition: all 0.2s ease-in-out;
+}
+
+a.btn:hover {
+  background-color: #5C1B99; /* Darker purple when hovered */
+  transform: translateY(-2px); /* Makes the button "lift" when you hover */
+  box-shadow: 0px 6px 12px rgba(138, 43, 226, 0.4);
 }
