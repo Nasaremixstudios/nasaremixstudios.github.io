@@ -1,3 +1,9 @@
+---
+layout: default
+title: Addons
+permalink: /addons/
+---
+
 # Addons by Nasaremix Studios
 <link rel="stylesheet" href="assets/css/style.css">
 A list of my currently available Minecraft Bedrock addons. Click the links below to view the project pages and download them directly from CurseForge. ill add more soon
