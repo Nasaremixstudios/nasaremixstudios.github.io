@@ -14,7 +14,7 @@ From the custom progression of **Aetherium Tools** to new mobs, structures, and 
 ### 🚀 Quick Links
 * 📦 **[Browse All Addons](/addons)** - Download my latest projects.
 * 🗺️ **[View the Roadmap](/roadmap)** - See what I'm working on right now.
-* 💬 **[Join the Discord](https://discord.gg/6rjTGkRBzP)** - *(You can add your discord link here later!)*
+* 💬 **[Join the Discord](https://discord.gg/6rjTGkRBzP)**
 
 ---
 *Stay tuned—Grimstone Tools are coming next!*
