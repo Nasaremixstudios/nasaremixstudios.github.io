@@ -3,9 +3,9 @@ layout: page
 title: About
 permalink: /about/
 ---
-<link rel="stylesheet" href="assets/css/style.css">
-# About Nasaremix Studios
 
+# About Nasaremix Studios
+<link rel="stylesheet" href="assets/css/style.css">
 Hi, I'm the creator behind Nasaremix Studios. 
 
 I started making Minecraft Bedrock addons to bring new ideas to the game. What started as a few small projects has grown into a library of nearly 40 different addons, tools, and expansions.
