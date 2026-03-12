@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-
+<link rel="stylesheet" href="assets/css/style.css">
 # About Nasaremix Studios
 
 Hi, I'm the creator behind Nasaremix Studios. 
