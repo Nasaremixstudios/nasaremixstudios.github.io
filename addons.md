@@ -6,7 +6,7 @@ permalink: /addons/
 
 
 <div class="logo-container">
-  <img src="assets/images/Image profile.png" alt="Nasaremix Logo" class="logo-small">
+  <img src="assets/images/Imageprofile.png" alt="Nasaremix Logo" class="logo-small">
 </div>
 
 # Addons by Nasaremix Studios
