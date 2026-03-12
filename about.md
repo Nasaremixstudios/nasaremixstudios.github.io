@@ -1,0 +1,18 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+# About Nasaremix Studios
+
+Hi, I'm the creator behind Nasaremix Studios. 
+
+I started making Minecraft Bedrock addons to bring new ideas to the game. What started as a few small projects has grown into a library of nearly 40 different addons, tools, and expansions.
+
+**My Philosophy:**
+* Keep it clean and vanilla-friendly.
+* Listen to the community.
+* Always keep improving.
+
+Feel free to check out my [Addons](/addons) or see what's coming next on the [Roadmap](/roadmap).
