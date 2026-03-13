@@ -4,12 +4,24 @@
 
 /* 🌌 Nasaremix Studios - Aetherium Purple Theme 🌌 */
 
-/* 1. Make the background a tiny bit darker so white boxes would pop (optional, but looks clean) */
+/* 1. Add Logo Next to Site Title */
+.site-title::before {
+  content: "";
+  display: inline-block;
+  width: 35px;           /* Size of the logo */
+  height: 35px;
+  background-image: url('/assets/images/Imageprofile.png'); /* Points to your uploaded logo */
+  background-size: cover;
+  vertical-align: middle;
+  margin-right: 12px;    /* Space between logo and text */
+  border-radius: 6px;    /* Makes the square slightly rounded and modern */
+}
+
+/* 2. Background and Headers */
 body {
   background-color: #fafafa;
 }
 
-/* 2. Style all Headers (H1, H2, H3) to be a very dark, sleek purple */
 h1, h2, h3 {
   color: #2b0044;
   font-weight: 700;
@@ -19,7 +31,7 @@ h1, h2, h3 {
 .site-header {
   border-top: 6px solid #8A2BE2;
   background-color: #ffffff;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.05); /* Adds a tiny shadow under the menu */
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
 }
 
 /* 4. Normal text links */
@@ -28,7 +40,7 @@ a {
 }
 a:hover {
   color: #5C1B99;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* 5. 🟪 CUSTOM DOWNLOAD BUTTONS 🟪 */
