@@ -1,142 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addons | Nasaremix Studios</title>
-    <link rel="stylesheet" href="/assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Addons | Nasaremix Studios</title>
+
+<link rel="stylesheet" href="/assets/style.css">
+
+<style>
+
+/* 🌌 PAGE FADE IN */
+body{
+animation: pageFade 1s ease;
+}
+
+@keyframes pageFade{
+from{opacity:0; transform:translateY(15px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+
+/* ✨ HEADER GLOW */
+header{
+text-align:center;
+margin-bottom:40px;
+}
+
+header h1{
+text-shadow:0 0 12px rgba(138,43,226,0.6);
+animation:titleGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow{
+from{ text-shadow:0 0 6px rgba(138,43,226,0.4);}
+to{ text-shadow:0 0 22px rgba(138,43,226,0.9);}
+}
+
+
+/* 🚀 CARD HOVER EFFECT */
+.cf-card{
+position:relative;
+overflow:hidden;
+opacity:0;
+transform:translateY(30px);
+animation:cardReveal 0.8s ease forwards;
+}
+
+.cf-card:hover{
+transform:translateY(-6px) scale(1.02);
+}
+
+/* stagger reveal timing */
+.cf-card:nth-child(1){animation-delay:0.1s;}
+.cf-card:nth-child(2){animation-delay:0.2s;}
+.cf-card:nth-child(3){animation-delay:0.3s;}
+.cf-card:nth-child(4){animation-delay:0.4s;}
+.cf-card:nth-child(5){animation-delay:0.5s;}
+.cf-card:nth-child(6){animation-delay:0.6s;}
+.cf-card:nth-child(7){animation-delay:0.7s;}
+
+@keyframes cardReveal{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+/* 🌠 GLOW SWEEP ACROSS CARD */
+.cf-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(138,43,226,0.15),
+transparent
+);
+opacity:0;
+transition:opacity 0.3s;
+}
+
+.cf-card:hover::before{
+opacity:1;
+}
+
+
+/* 🏷️ TAG GLOW */
+.cf-tag{
+transition:all 0.25s ease;
+}
+
+.cf-tag:hover{
+color:white;
+border-color:#8A2BE2;
+box-shadow:0 0 8px rgba(138,43,226,0.7);
+}
+
+
+/* 📥 DOWNLOAD BUTTON PULSE */
+.btn{
+position:relative;
+overflow:hidden;
+}
+
+.btn::after{
+content:"";
+position:absolute;
+inset:0;
+border-radius:inherit;
+animation:buttonPulse 3s infinite;
+}
+
+@keyframes buttonPulse{
+0%{box-shadow:0 0 0 rgba(138,43,226,0);}
+50%{box-shadow:0 0 16px rgba(138,43,226,0.5);}
+100%{box-shadow:0 0 0 rgba(138,43,226,0);}
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <header>
-        <h1>Addons by Nasaremix Studios</h1>
-        <p>A list of my currently available Minecraft Bedrock addons. Click the links below to download them directly from CurseForge.</p>
-    </header>
+<header>
+<h1>Addons by Nasaremix Studios</h1>
+<p>A list of my currently available Minecraft Bedrock addons. Click the links below to download them directly from CurseForge.</p>
+</header>
 
-    <main>
+<main>
 
-        <div class="cf-list">
+<div class="cf-list">
 
-            <!-- MARVEL & DC ADDON -->
-            <div class="cf-card">
-                <div class="cf-content">
-                    <h3>Marvel & DC Superheroes <span class="cf-author">| By Nasaremix</span></h3>
-                    <p class="cf-desc">Suit up with custom superhero abilities. Become the Flash, and more!</p>
-                    <div class="cf-tags">
-                        <span class="cf-tag">Addons</span>
-                        <span class="cf-tag">Superheroes</span>
-                        <span class="cf-tag">Armor</span>
-                    </div>
-                </div>
-                <div class="cf-button-container">
-                    <a href="https://www.curseforge.com/minecraft-bedrock/addons/the-flash-suit-1-0-0" class="btn">📥 Download</a>
-                </div>
-            </div>
+<!-- MARVEL & DC ADDON -->
+<div class="cf-card">
+<div class="cf-content">
+<h3>Marvel & DC Superheroes <span class="cf-author">| By Nasaremix</span></h3>
+<p class="cf-desc">Suit up with custom superhero abilities. Become the Flash, and more!</p>
+<div class="cf-tags">
+<span class="cf-tag">Addons</span>
+<span class="cf-tag">Superheroes</span>
+<span class="cf-tag">Armor</span>
+</div>
+</div>
+<div class="cf-button-container">
+<a href="https://www.curseforge.com/minecraft-bedrock/addons/the-flash-suit-1-0-0" class="btn">📥 Download</a>
+</div>
+</div>
 
-            <!-- ELEMENTAL SWORDS -->
-            <div class="cf-card">
-                <div class="cf-content">
-                    <h3>Elemental Swords <span class="cf-author">| By Nasaremix</span></h3>
-                    <p class="cf-desc">Wield custom swords imbued with powerful elemental magic and abilities.</p>
-                    <div class="cf-tags">
-                        <span class="cf-tag">Addons</span>
-                        <span class="cf-tag">Weapons</span>
-                        <span class="cf-tag">Magic</span>
-                    </div>
-                </div>
-                <div class="cf-button-container">
-                    <a href="https://www.curseforge.com/minecraft-bedrock/addons/elemental-swords-0-0-1" class="btn">📥 Download</a>
-                </div>
-            </div>
+<!-- ELEMENTAL SWORDS -->
+<div class="cf-card">
+<div class="cf-content">
+<h3>Elemental Swords <span class="cf-author">| By Nasaremix</span></h3>
+<p class="cf-desc">Wield custom swords imbued with powerful elemental magic and abilities.</p>
+<div class="cf-tags">
+<span class="cf-tag">Addons</span>
+<span class="cf-tag">Weapons</span>
+<span class="cf-tag">Magic</span>
+</div>
+</div>
+<div class="cf-button-container">
+<a href="https://www.curseforge.com/minecraft-bedrock/addons/elemental-swords-0-0-1" class="btn">📥 Download</a>
+</div>
+</div>
 
-            <!-- SCULKER WEAPONS -->
-            <div class="cf-card">
-                <div class="cf-content">
-                    <h3>Sculker Weapons & Tools <span class="cf-author">| By Nasaremix</span></h3>
-                    <p class="cf-desc">Powerful endgame gear crafted directly from the deep dark Sculk.</p>
-                    <div class="cf-tags">
-                        <span class="cf-tag">Addons</span>
-                        <span class="cf-tag">Weapons</span>
-                        <span class="cf-tag">Survival</span>
-                    </div>
-                </div>
-                <div class="cf-button-container">
-                    <a href="https://www.curseforge.com/minecraft-bedrock/addons/sculker-weapons-and-tools" class="btn">📥 Download</a>
-                </div>
-            </div>
+<!-- SCULKER WEAPONS -->
+<div class="cf-card">
+<div class="cf-content">
+<h3>Sculker Weapons & Tools <span class="cf-author">| By Nasaremix</span></h3>
+<p class="cf-desc">Powerful endgame gear crafted directly from the deep dark Sculk.</p>
+<div class="cf-tags">
+<span class="cf-tag">Addons</span>
+<span class="cf-tag">Weapons</span>
+<span class="cf-tag">Survival</span>
+</div>
+</div>
+<div class="cf-button-container">
+<a href="https://www.curseforge.com/minecraft-bedrock/addons/sculker-weapons-and-tools" class="btn">📥 Download</a>
+</div>
+</div>
 
-            <!-- NASA'S CAT ARMOR -->
-            <div class="cf-card">
-                <div class="cf-content">
-                    <h3>Nasa's Cat Armor <span class="cf-author">| By Nasaremix</span></h3>
-                    <p class="cf-desc">Keep your feline friends safe on your adventures with custom armor sets.</p>
-                    <div class="cf-tags">
-                        <span class="cf-tag">Addons</span>
-                        <span class="cf-tag">Armor</span>
-                        <span class="cf-tag">Pets</span>
-                    </div>
-                </div>
-                <div class="cf-button-container">
-                    <a href="https://www.curseforge.com/minecraft-bedrock/addons/nasa-s-cat-armor" class="btn">📥 Download</a>
-                </div>
-            </div>
+<!-- NASA'S CAT ARMOR -->
+<div class="cf-card">
+<div class="cf-content">
+<h3>Nasa's Cat Armor <span class="cf-author">| By Nasaremix</span></h3>
+<p class="cf-desc">Keep your feline friends safe on your adventures with custom armor sets.</p>
+<div class="cf-tags">
+<span class="cf-tag">Addons</span>
+<span class="cf-tag">Armor</span>
+<span class="cf-tag">Pets</span>
+</div>
+</div>
+<div class="cf-button-container">
+<a href="https://www.curseforge.com/minecraft-bedrock/addons/nasa-s-cat-armor" class="btn">📥 Download</a>
+</div>
+</div>
 
-            <!-- VIRTUAL CRYPTO -->
-            <div class="cf-card">
-                <div class="cf-content">
-                    <h3>Virtual Crypto Economy <span class="cf-author">| By Nasaremix</span></h3>
-                    <p class="cf-desc">A complete stock market and virtual economy system for your world.</p>
-                    <div class="cf-tags">
-                        <span class="cf-tag">Scripts</span>
-                        <span class="cf-tag">Economy</span>
-                        <span class="cf-tag">Servers</span>
-                    </div>
-                </div>
-                <div class="cf-button-container">
-                    <a href="https://www.curseforge.com/minecraft-bedrock/scripts/virtual-crypt-stock-market-economy-system" class="btn">📥 Download</a>
-                </div>
-            </div>
+<!-- VIRTUAL CRYPTO -->
+<div class="cf-card">
+<div class="cf-content">
+<h3>Virtual Crypto Economy <span class="cf-author">| By Nasaremix</span></h3>
+<p class="cf-desc">A complete stock market and virtual economy system for your world.</p>
+<div class="cf-tags">
+<span class="cf-tag">Scripts</span>
+<span class="cf-tag">Economy</span>
+<span class="cf-tag">Servers</span>
+</div>
+</div>
+<div class="cf-button-container">
+<a href="https://www.curseforge.com/minecraft-bedrock/scripts/virtual-crypt-stock-market-economy-system" class="btn">📥 Download</a>
+</div>
+</div>
 
-            <!-- LAND CLAIM -->
-            <div class="cf-card">
-                <div class="cf-content">
-                    <h3>The Land Claim Addon <span class="cf-author">| By Nasaremix</span></h3>
-                    <p class="cf-desc">Protect your bases, claim your territory, and keep griefers out.</p>
-                    <div class="cf-tags">
-                        <span class="cf-tag">Scripts</span>
-                        <span class="cf-tag">Utility</span>
-                        <span class="cf-tag">Servers</span>
-                    </div>
-                </div>
-                <div class="cf-button-container">
-                    <a href="https://www.curseforge.com/minecraft-bedrock/scripts/the-land-claim-addon" class="btn">📥 Download</a>
-                </div>
-            </div>
+<!-- LAND CLAIM -->
+<div class="cf-card">
+<div class="cf-content">
+<h3>The Land Claim Addon <span class="cf-author">| By Nasaremix</span></h3>
+<p class="cf-desc">Protect your bases, claim your territory, and keep griefers out.</p>
+<div class="cf-tags">
+<span class="cf-tag">Scripts</span>
+<span class="cf-tag">Utility</span>
+<span class="cf-tag">Servers</span>
+</div>
+</div>
+<div class="cf-button-container">
+<a href="https://www.curseforge.com/minecraft-bedrock/scripts/the-land-claim-addon" class="btn">📥 Download</a>
+</div>
+</div>
 
-            <!-- BETTER TREES -->
-            <div class="cf-card">
-                <div class="cf-content">
-                    <h3>Better Trees From Saplings <span class="cf-author">| By Nasaremix</span></h3>
-                    <p class="cf-desc">Greatly enhances tree growth and generation when planting saplings.</p>
-                    <div class="cf-tags">
-                        <span class="cf-tag">Addons</span>
-                        <span class="cf-tag">Environment</span>
-                        <span class="cf-tag">Vanilla+</span>
-                    </div>
-                </div>
-                <div class="cf-button-container">
-                    <a href="https://www.curseforge.com/minecraft-bedrock/addons/better-trees-from-saplings" class="btn">📥 Download</a>
-                </div>
-            </div>
+<!-- BETTER TREES -->
+<div class="cf-card">
+<div class="cf-content">
+<h3>Better Trees From Saplings <span class="cf-author">| By Nasaremix</span></h3>
+<p class="cf-desc">Greatly enhances tree growth and generation when planting saplings.</p>
+<div class="cf-tags">
+<span class="cf-tag">Addons</span>
+<span class="cf-tag">Environment</span>
+<span class="cf-tag">Vanilla+</span>
+</div>
+</div>
+<div class="cf-button-container">
+<a href="https://www.curseforge.com/minecraft-bedrock/addons/better-trees-from-saplings" class="btn">📥 Download</a>
+</div>
+</div>
 
-        </div>
+</div>
 
-    </main>
+</main>
 
-    <footer>
-        <p>© 2026 Nasaremix Studios</p>
-    </footer>
+<footer>
+<p>© 2026 Nasaremix Studios</p>
+</footer>
 
 </body>
 </html>
