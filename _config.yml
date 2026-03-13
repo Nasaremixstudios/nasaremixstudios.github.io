@@ -5,6 +5,6 @@ theme: minima
 # This creates your top navigation menu
 header_pages:
   - index.md
-  - addons.md
+  - addons.html
   - roadmap.md
   - about.md
