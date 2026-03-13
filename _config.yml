@@ -4,7 +4,7 @@ theme: null
 
 # This creates your top navigation menu
 header_pages:
-  - index.md
+  - index.html
   - addons.html
-  - roadmap.md
-  - about.md
+  - roadmap.html
+  - about.html
