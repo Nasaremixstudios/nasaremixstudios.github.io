@@ -2,18 +2,74 @@
 ---
 @import "minima";
 
-/* 🌌 Nasaremix Studios - CURSEFORGE DARK THEME 🌌 */
+/* 🌌 Nasaremix Studios - DEEP SPACE CURSEFORGE THEME 🌌 */
 
-body { background-color: #121212; color: #cccccc; }
+/* 1. Base Space Background */
+body { 
+  background-color: #050510; /* Deep space dark blue/black */
+  color: #cccccc; 
+  position: relative;
+  overflow-x: hidden; /* Stops horizontal scrolling when the moon is off-screen */
+  min-height: 100vh;
+}
+
 h1, h2, h3, h4, h5, h6 { color: #ffffff; font-weight: 700; border-bottom: none !important; }
 
-/* Top Navigation Bar */
-.site-header { background-color: #1a1a1a; border-top: 6px solid #8A2BE2; border-bottom: 1px solid #333; }
+/* 2. ✨ THE MOVING STARS ✨ */
+body::before {
+  content: ""; position: fixed;
+  top: 0; left: 0; width: 200vw; height: 200vh;
+  z-index: -2; pointer-events: none; /* Allows you to click buttons through the stars */
+  
+  /* Draws tiny stars using code */
+  background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='45' cy='85' r='1' fill='%23ffffff' opacity='0.8'/%3E%3Ccircle cx='150' cy='220' r='1.5' fill='%23ffffff' opacity='0.6'/%3E%3Ccircle cx='280' cy='50' r='2' fill='%23ffffff' opacity='0.9'/%3E%3Ccircle cx='360' cy='320' r='1' fill='%23ffffff' opacity='0.5'/%3E%3Ccircle cx='90' cy='370' r='1.5' fill='%23ffffff' opacity='0.7'/%3E%3Ccircle cx='310' cy='190' r='1' fill='%23ffffff' opacity='0.4'/%3E%3Ccircle cx='220' cy='280' r='2' fill='%23ffffff' opacity='0.8'/%3E%3C/svg%3E");
+  
+  animation: moveStars 150s linear infinite; /* Very slow drift */
+}
+
+@keyframes moveStars {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-400px, -400px); }
+}
+
+/* 3. 🌕 THE SLOW MOVING MOON 🌕 */
+body::after {
+  content: ""; position: fixed;
+  top: 15%; right: -250px; /* Starts completely off-screen to the right */
+  width: 150px; height: 150px;
+  border-radius: 50%; z-index: -1; pointer-events: none;
+  
+  /* Draws a detailed moon using CSS gradients! */
+  background: 
+    radial-gradient(circle at 40% 40%, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 10%, transparent 15%),
+    radial-gradient(circle at 60% 70%, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.25) 15%, transparent 20%),
+    radial-gradient(circle at 20% 60%, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 8%, transparent 12%),
+    radial-gradient(circle at 30% 30%, #ffffff 0%, #d4d4dc 40%, #888890 80%, #303036 100%);
+  
+  /* Gives the moon a dark crater shadow and an outer purple/blue glow */
+  box-shadow: inset -15px -15px 30px rgba(0,0,0,0.8), 0 0 40px rgba(180, 180, 255, 0.2);
+  
+  /* Takes exactly 3 minutes (180s) to slowly cross your entire screen */
+  animation: orbitMoon 180s linear infinite; 
+}
+
+@keyframes orbitMoon {
+  0% { right: -250px; top: 15%; transform: rotate(0deg); }
+  50% { top: 5%; } /* Arcs slightly upward in the middle of the screen */
+  100% { right: 110vw; top: 15%; transform: rotate(45deg); }
+}
+
+/* 4. Frosted Glass Top Navigation Bar */
+.site-header { 
+  background-color: rgba(26, 26, 26, 0.7); /* Semi-transparent */
+  backdrop-filter: blur(10px); /* Blurs the stars behind the menu! */
+  border-top: 6px solid #8A2BE2; border-bottom: 1px solid #333; 
+}
 .site-title { color: #ffffff !important; }
 .page-link { color: #cccccc !important; }
 .page-link:hover { color: #8A2BE2 !important; }
 
-/* Add Logo Next to Site Title */
+/* Logo Next to Site Title */
 .site-title::before {
   content: ""; display: inline-block; width: 35px; height: 35px;
   background-image: url('/assets/images/Imageprofile.png');
@@ -35,10 +91,13 @@ a.btn:hover { background-color: #5C1B99; transform: translateY(-2px); box-shadow
 /* 📦 CURSEFORGE STYLE ADDON LIST 📦 */
 .cf-list { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; margin-bottom: 40px; }
 .cf-card {
-  display: flex; background-color: #1e1e1e; border: 1px solid #333;
+  display: flex; 
+  background-color: rgba(30, 30, 30, 0.85); /* Semi-transparent boxes */
+  border: 1px solid #333; 
+  backdrop-filter: blur(5px); /* Blurs the moon when it passes behind the box */
   border-radius: 8px; padding: 15px; transition: border-color 0.2s, background-color 0.2s;
 }
-.cf-card:hover { background-color: #242424; border-color: #8A2BE2; }
+.cf-card:hover { background-color: rgba(36, 36, 36, 0.95); border-color: #8A2BE2; }
 
 .cf-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 .cf-content h3 { margin: 0 0 5px 0; font-size: 1.3em; color: #ffffff; }
