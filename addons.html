@@ -20,10 +20,10 @@ to{opacity:1; transform:translateY(0);}
 }
 
 
-/* ✨ HEADER GLOW */
+/* ✨ HEADER */
 header{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 header h1{
@@ -37,7 +37,24 @@ to{ text-shadow:0 0 22px rgba(138,43,226,0.9);}
 }
 
 
-/* 🚀 CARD HOVER EFFECT */
+/* 🔗 NAV BUTTON BAR */
+
+.nav-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+margin-bottom:40px;
+}
+
+.nav-buttons .btn:hover{
+transform:translateY(-3px);
+}
+
+
+/* 🚀 CARD EFFECTS */
+
 .cf-card{
 position:relative;
 overflow:hidden;
@@ -50,7 +67,6 @@ animation:cardReveal 0.8s ease forwards;
 transform:translateY(-6px) scale(1.02);
 }
 
-/* stagger reveal timing */
 .cf-card:nth-child(1){animation-delay:0.1s;}
 .cf-card:nth-child(2){animation-delay:0.2s;}
 .cf-card:nth-child(3){animation-delay:0.3s;}
@@ -67,7 +83,8 @@ transform:translateY(0);
 }
 
 
-/* 🌠 GLOW SWEEP ACROSS CARD */
+/* 🌠 GLOW SWEEP */
+
 .cf-card::before{
 content:"";
 position:absolute;
@@ -88,6 +105,7 @@ opacity:1;
 
 
 /* 🏷️ TAG GLOW */
+
 .cf-tag{
 transition:all 0.25s ease;
 }
@@ -100,6 +118,7 @@ box-shadow:0 0 8px rgba(138,43,226,0.7);
 
 
 /* 📥 DOWNLOAD BUTTON PULSE */
+
 .btn{
 position:relative;
 overflow:hidden;
@@ -128,6 +147,14 @@ animation:buttonPulse 3s infinite;
 <header>
 <h1>Addons by Nasaremix Studios</h1>
 <p>A list of my currently available Minecraft Bedrock addons. Click the links below to download them directly from CurseForge.</p>
+
+<div class="nav-buttons">
+<a href="/index.html" class="btn">🏠 Home</a>
+<a href="/roadmap.html" class="btn">🗺️ Roadmap</a>
+<a href="/about.html" class="btn">👤 About</a>
+<a href="https://discord.gg/6rjTGkRBzP" class="btn">💬 Discord</a>
+</div>
+
 </header>
 
 <main>
