@@ -1,18 +1,106 @@
----
-layout: page
-title: About
-permalink: /about/
----
+<!DOCTYPE html>
 
-# About Nasaremix Studios
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>About - Nasaremix Studios</title>
+
 <link rel="stylesheet" href="assets/style.css">
-Hi, I'm the creator behind Nasaremix Studios. 
 
-I started making Minecraft Bedrock addons to bring new ideas to the game. What started as a few small projects has grown into a library of nearly 40 different addons, tools, and expansions.
+<style>
 
-**My Philosophy:**
-* Keep it clean and vanilla-friendly.
-* Listen to the community.
-* Always keep improving.
+/* 🌌 About Page Only Styles */
 
-Feel free to check out my [Addons](/addons) or see what's coming next on the [Roadmap](/roadmap).
+.about-container{
+max-width:800px;
+margin:auto;
+margin-top:40px;
+background:rgba(25,25,35,0.8);
+border:1px solid #333;
+border-radius:10px;
+padding:30px;
+backdrop-filter:blur(6px);
+box-shadow:0 0 25px rgba(138,43,226,0.15);
+transition:all 0.3s ease;
+}
+
+.about-container:hover{
+border-color:#8A2BE2;
+box-shadow:0 0 35px rgba(138,43,226,0.35);
+}
+
+.about-title{
+text-align:center;
+margin-bottom:20px;
+}
+
+.about-philosophy{
+margin-top:25px;
+padding-left:20px;
+}
+
+.about-philosophy li{
+margin-bottom:8px;
+transition:0.2s;
+}
+
+.about-philosophy li:hover{
+color:#8A2BE2;
+transform:translateX(4px);
+}
+
+.nav-buttons{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="about-container">
+
+<h1 class="about-title">About Nasaremix Studios 🌌</h1>
+
+<p>
+Hi, I'm the creator behind <strong>Nasaremix Studios</strong>.
+</p>
+
+<p>
+I started making Minecraft Bedrock addons to bring new ideas to the game.
+What started as a few small projects has grown into a library of nearly
+<strong>40 different addons, tools, and expansions.</strong>
+</p>
+
+<h2>My Philosophy</h2>
+
+<ul class="about-philosophy">
+<li>Keep it clean and vanilla-friendly.</li>
+<li>Listen to the community.</li>
+<li>Always keep improving.</li>
+</ul>
+
+<p>
+Feel free to explore the projects and see what I'm building next.
+</p>
+
+<div class="nav-buttons">
+
+<a href="addons.html" class="btn">📦 View Addons</a>
+
+<a href="roadmap.html" class="btn">🗺️ View Roadmap</a>
+
+<a href="index.html" class="btn">🏠 Home</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
